@@ -10,7 +10,6 @@ Django==4.2.10
 djangorestframework==3.14.0
 idna==3.6
 jmespath==1.0.1
-mysqlclient==2.2.4
 numpy==1.26.4
 pandas==2.2.0
 pathspec==0.10.1
