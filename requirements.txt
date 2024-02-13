@@ -1,5 +1,5 @@
 asgiref==3.7.2
-awsebcli==3.20.10
+awsebcli
 boto3
 botocore
 cement==2.8.2
