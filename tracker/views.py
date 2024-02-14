@@ -14,12 +14,13 @@ from botocore.exceptions import ClientError
 
 def read_csv(filename,bucket):
     config = ConfigParser()
-    config.read('credentials.config')
-    aws_access_id = config.get('section','aws_access_id')
-    aws_secret_key = config.get('section','aws_secret_key')
+    # config.read('credentials.config')
+    # aws_access_id = config.get('section','aws_access_id')
+    # aws_secret_key = config.get('section','aws_secret_key')
     object_key = filename
     bucket_name=bucket
-    client = boto3.client('s3',aws_access_key_id=aws_access_id,aws_secret_access_key=aws_secret_key)
+    # client = boto3.client('s3',aws_access_key_id=aws_access_id,aws_secret_access_key=aws_secret_key)
+    client = boto3.client('s3')
     response = client.get_object(Bucket=bucket_name,Key=object_key)
     status = response.get("ResponseMetadata", {}).get("HTTPStatusCode")
     if status == 200:
