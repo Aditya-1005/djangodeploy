@@ -40,3 +40,6 @@ def home(request):
     df = read_csv(filename=file_name,bucket=bucket)
     final = df.to_json(orient='records', lines=True)
     return Response(final, status=status.HTTP_200_OK)
+
+def hello(request):
+    return HttpResponse('Hello User. You can now consume this api!!!')
